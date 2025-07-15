@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Breadcrumbs from "@/components/breadcrumbs"
 import AnimatedSection from "@/components/animated-section"
-import { Award, BookOpen, Users, Zap, Mail, Linkedin, MessageCircle } from "lucide-react"
+import { Award, BookOpen, Users, Zap, Mail } from "lucide-react"
 import Link from "next/link"
 
 const skills = [
@@ -115,7 +115,7 @@ export default function AboutPage() {
 
                 <div className="flex gap-4">
                   <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                    <Link href="/consulting">Work With Me</Link>
+                    <Link href="/services">Work With Me</Link>
                   </Button>
                   <Button
                     asChild
@@ -215,12 +215,9 @@ export default function AboutPage() {
 
                     <div>
                       <h4 className="font-semibold mb-2 text-gray-200">Key Achievements:</h4>
-                      <ul className="space-y-1">
+                      <ul className="list-disc list-inside space-y-1 text-gray-400 text-sm">
                         {job.achievements.map((achievement, i) => (
-                          <li key={i} className="text-gray-400 text-sm flex items-center">
-                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3" />
-                            {achievement}
-                          </li>
+                          <li key={i}>{achievement}</li>
                         ))}
                       </ul>
                     </div>
@@ -244,7 +241,7 @@ export default function AboutPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                    <Link href="/consulting">Start a Project</Link>
+                    <Link href="/services">Explore Services</Link>
                   </Button>
 
                   <div className="flex gap-4">
@@ -252,18 +249,6 @@ export default function AboutPage() {
                       <Link href="mailto:trevon@example.com">
                         <Mail className="w-4 h-4 mr-2" />
                         Email
-                      </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="sm" className="text-gray-400 hover:text-blue-400">
-                      <Link href="https://linkedin.com/in/trevon">
-                        <Linkedin className="w-4 h-4 mr-2" />
-                        LinkedIn
-                      </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="sm" className="text-gray-400 hover:text-blue-400">
-                      <Link href="https://discord.com/users/trevon">
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        Discord
                       </Link>
                     </Button>
                   </div>

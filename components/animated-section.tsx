@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef, useState } from "react"
 
 interface AnimatedSectionProps {
@@ -34,7 +33,7 @@ export default function AnimatedSection({ children, className = "", delay = 0 }:
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ${
+      className={`transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${className}`}
     >

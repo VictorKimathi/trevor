@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedSection from "@/components/animated-section"
-import { Gamepad2, Scroll, Users, Award } from "lucide-react"
+import { Newspaper, Lightbulb, Code, TrendingUp } from "lucide-react" // Updated icons
 
 export default function HomePage() {
   return (
@@ -41,7 +41,7 @@ export default function HomePage() {
                 size="lg"
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 bg-transparent"
               >
-                <Link href="/consulting">Start a Project</Link>
+                <Link href="/services">View Services</Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -52,34 +52,33 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="font-exo text-4xl font-bold tracking-wider mb-6">CRAFTING LEGENDARY EXPERIENCES</h2>
+            <h2 className="font-exo text-4xl font-bold tracking-wider mb-6">GAMING CONTENT EXPERTISE</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From epic fantasy realms to futuristic sci-fi universes, I specialize in creating narratives that immerse
-              players in unforgettable worlds.
+              Delivering high-impact content for the gaming industry, from deep dives to market analysis.
             </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Gamepad2,
-                title: "World Building",
-                description: "Rich, immersive universes with deep lore and interconnected systems",
+                icon: Newspaper,
+                title: "Gaming Journalism",
+                description: "Engaging news, reviews, and reports for gamer audiences.",
               },
               {
-                icon: Scroll,
-                title: "Narrative Design",
-                description: "Branching storylines that adapt to player choices and actions",
+                icon: Lightbulb,
+                title: "Feature Writing",
+                description: "In-depth articles and thought-provoking think pieces.",
               },
               {
-                icon: Users,
-                title: "Character Development",
-                description: "Memorable characters with authentic voices and compelling arcs",
+                icon: Code,
+                title: "Tech & Hardware Coverage",
+                description: "Reviews and analysis of gaming tech and hardware.",
               },
               {
-                icon: Award,
-                title: "Dialogue Systems",
-                description: "Dynamic conversations that feel natural and impactful",
+                icon: TrendingUp,
+                title: "Trend Forecasting",
+                description: "Insights into market trends and player behavior.",
               },
             ].map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 200}>
@@ -96,7 +95,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Work */}
+      {/* Featured Work (kept from original Trevon site) */}
       <section className="py-20 px-4 bg-gray-950/50">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-16">
@@ -176,7 +175,7 @@ export default function HomePage() {
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white border-0 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
             >
-              <Link href="/consulting">Start Your Project</Link>
+              <Link href="/services">Explore Services</Link>
             </Button>
           </AnimatedSection>
         </div>

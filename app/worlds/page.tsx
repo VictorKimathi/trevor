@@ -183,7 +183,7 @@ export default function WorldsPage() {
               narratives.
             </p>
             <Button asChild size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
-              <Link href="/consulting">Start Your Project</Link>
+              <Link href="/services">Explore Services</Link>
             </Button>
           </div>
         </AnimatedSection>

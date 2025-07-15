@@ -28,9 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${exo.variable}`}>
-      <body className="bg-gray-900 text-white min-h-screen">
+      <body className="bg-gray-900 text-white min-h-screen flex flex-col">
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="flex-grow pt-16">{children}</main>
         <Footer />
       </body>
     </html>
